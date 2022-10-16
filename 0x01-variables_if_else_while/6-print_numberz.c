@@ -3,15 +3,15 @@
  * main - Entry point
  *
  * Return: Always 0 (success)
- *
+ * print all single digit numbers of base 10
  */
 int main(void)
 {
-	int a;
+	int p;
 
-	for (a = 0; a <= 10; a++)
+	for (p = '0'; p <= '9'; p++)
 	{
-		putchar(a);
+		putchar(p);
 	}
 	putchar('\n');
 	return (0);
