@@ -9,16 +9,16 @@ int main(void)
 {
 	int j;
 
-	for (j = '0'; j <= 9; j++)
+	for (j = 48; j <= 58; j++)
 	{
-		putchar((j % 9) + '0');
+		putchar(j);
+		if (j != 57)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
-			if (j == 9)
-			{
-				putchar(',');
-				putchar(' ');
-			}
 		putchar('\n');
-		return (0);
+	return (0);
 }
 
