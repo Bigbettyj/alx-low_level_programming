@@ -13,5 +13,5 @@ int print_last_digit(int s)
 
 	_putchar(pa + '0');
 	_putchar('\n');
-	return (0);
+	return (pa);
 }
