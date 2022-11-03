@@ -23,5 +23,12 @@ int check_square(int i, int j)
  */
 int _sqrt_recursion(int n)
 {
-	return (check_square(n, 1));
+	int i = 0;
+
+	if (i < 0)
+		return (-1);
+	else
+	{
+	return (check_square(n, i));
+	}
 }
