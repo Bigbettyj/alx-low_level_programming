@@ -7,11 +7,14 @@
  */
 int check_square(int i, int j)
 {
-	if (i * i == j)
-		return (i);
-	else if (i * i > j)
-		return (-1);
+	if (j == 0 || j == 1)
+		return (j);
+	else if (i * i < j)
 	return (check_square(j, i + 1));
+	else if (i * i == j)
+		return (i);
+	return (-1);
+	return (-1);
 }
 /**
  * _sqrt_recursion - returns the natural square root of a number
