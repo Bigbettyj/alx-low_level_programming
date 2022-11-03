@@ -27,8 +27,5 @@ int _sqrt_recursion(int n)
 
 	if (i < 0)
 		return (-1);
-	else
-	{
 	return (check_square(i, n));
-	}
 }
