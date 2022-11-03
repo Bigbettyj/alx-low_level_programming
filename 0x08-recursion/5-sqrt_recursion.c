@@ -21,4 +21,4 @@ int check_square(int i, int j)
 int _sqrt_recursion(int n)
 {
 	return (check_square(n, 1));
-}	
+}
