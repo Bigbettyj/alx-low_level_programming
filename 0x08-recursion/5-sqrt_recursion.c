@@ -10,7 +10,7 @@ int check_square(int i, int j)
 	if (j == 0 || j == 1)
 		return (j);
 	else if (i * i < j)
-	return (check_square(j, i + 1));
+	return (check_square(i + 1, j));
 	else if (i * i == j)
 		return (i);
 	return (-1);
@@ -29,6 +29,6 @@ int _sqrt_recursion(int n)
 		return (-1);
 	else
 	{
-	return (check_square(n, i));
+	return (check_square(i, n));
 	}
 }
