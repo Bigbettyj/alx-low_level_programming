@@ -9,19 +9,15 @@
  */
 int main(int argc, char *argv[])
 {
-	int n, mul;
+	int n, m;
 
-	mul = 0;
+	n = atoi(argv[1]);
+	m = atoi(argv[2]);
 	if (argc == 3)
 	{
-		for (n = 0; n < argc; n++)
-		{
-			printf("%s\n", argv[n]);
-			mul = mul * atoi(argv[n]);
-			printf("%d\n", mul);
-		}
-		printf("Error\n");
-		return (1);
+		printf("%d\n", m * n);
+		return (0);
 	}
-	return (0);
+	printf("Error\n");
+	return (1);
 }
