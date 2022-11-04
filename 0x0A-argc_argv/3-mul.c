@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	int n, mul;
 
 	mul = 0;
-	if (argc < 2)
+	if (argc == 3)
 	{
 		for (n = 0; n < argc; n++)
 		{
