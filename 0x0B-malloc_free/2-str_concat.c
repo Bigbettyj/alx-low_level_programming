@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 /**
  * _strlen - count string length
  * @s: the string
@@ -8,13 +7,10 @@
  */
 int _strlen(char *s)
 {
-	int i = 0;
+	unsigned int i = 0;
 
-	if (!s)
-		return (0);
-	while (*s)
+	while (s[i] != '\0')
 		i++;
-	s++;
 }
 return (i);
 }
@@ -29,24 +25,24 @@ char *str_concat(char *s1, char *s2)
 	char *cat;
 	unsigned int a, b, c;
 
-	if (!s1)
+	if (s1 == NULL)
 		s1 = "";
-	if (!s2)
+	if (s2 == NULL)
 		s2 = "";
-	c += _strlen(s1) + _strlen(s2);
-	cat = malloc((c * sizeof(char)) + 1);
-	if (cat == NULL)
+	c = (_strlen(s1) + _strlen(s2) + 1);
+	cat = (char *) malloc((c * sizeof(char));
+	if (cat == 0)
 	{
 		return (NULL);
 	}
-	for (a = 0; s1[a]; a++)
+	for (a = 0; *(s1 + a) != '\0'; a++)
 	{
-		cat[a] = s1[a];
+		*(cat + a) = (s1 + a);
 	}
-	for (b = 0; str[b]; b++, a++)
+	for (b = 0; *(str + b) != '\0'; b++)
 	{
-		cat[a] = s2[b];
+		*(cat + a) = *(s2 + b);
+		a++;
 	}
-	cat[a] = '\0';
 	return (cat);
 }
