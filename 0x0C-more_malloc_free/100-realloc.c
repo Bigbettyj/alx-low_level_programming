@@ -12,19 +12,17 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	char *r, *n = ptr;
 	unsigned int i, max = new_size;
 
-	if (new_size == old_size)
-		return (ptr);
 	if (ptr == NULL)
 	{
 		(malloc(new_size));
 		return (r);
 	}
-	if (new_size == 0)
+	else if (new_size == 0)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	if (new_size == old_size)
+	else if (new_size == old_size)
 		return (ptr);
 	r = malloc(new_size);
 	if (r == NULL)
