@@ -30,16 +30,16 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 	c = (_strlen(s1) + _strlen(s2) + 1);
-	cat = (char *) malloc((c * sizeof(char));
+	cat = (char *) malloc(c * sizeof(char));
 	if (cat == 0)
 	{
 		return (NULL);
 	}
 	for (a = 0; *(s1 + a) != '\0'; a++)
 	{
-		*(cat + a) = (s1 + a);
+		*(cat + a) = *(s1 + a);
 	}
-	for (b = 0; *(str + b) != '\0'; b++)
+	for (b = 0; *(s2 + b) != '\0'; b++)
 	{
 		*(cat + a) = *(s2 + b);
 		a++;
