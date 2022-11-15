@@ -1,14 +1,16 @@
 #include "dog.h"
 #include <stdlib.h>
-int_strlen(char *str);
+
+int _strlen(char *str);
 char *_strcopy(char *dest, char *src);
 dog_t *new_dog(char *name, float age, char *owner);
+
 /**
  * _strlen - lenght of string
  * @str: the string
  * Return: lenght of string
  */
-int_strlen(char *str)
+int _strlen(char *str)
 {
 	int i = 0;
 
@@ -36,7 +38,7 @@ char *_strcopy(char *dest, char *src)
  * @name: dog's name
  * @age: dog's age
  * @owner: dog's owner
- * Return: new dog
+ * Return: new struct dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
