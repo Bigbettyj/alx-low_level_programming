@@ -78,7 +78,7 @@ void print_all(const char * const format, ...)
 		{
 			printf("%s", str);
 			funcs[p].print(args);
-			str = ",";
+			str = ", ";
 		}
 		i++;
 	}
