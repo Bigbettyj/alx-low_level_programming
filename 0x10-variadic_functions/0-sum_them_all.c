@@ -12,6 +12,7 @@ int sum_them_all(const unsigned int n, ...)
 
 	va_start(args, n);
 
+	sum = 0;
 	for (m = 0, m < n, m++)
 	{
 		if (n == 0)
