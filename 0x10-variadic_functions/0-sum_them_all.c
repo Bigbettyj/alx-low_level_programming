@@ -1,5 +1,5 @@
 #include "variadic_functions.h"
-#include <stdio.h>
+#include <stdarg.h>
 /**
  * sum_them_all - sums up all it parameters
  * @n: the parameter
@@ -10,7 +10,7 @@ int sum_them_all(const unsigned int n, ...)
 	va_list args;
 	int m, sum;
 
-	va_start (args, n);
+	va_start(args, n);
 
 	for (m = 0, m < n, m++)
 	{
@@ -20,7 +20,7 @@ int sum_them_all(const unsigned int n, ...)
 		}
 		sum += va_arg(args, const unsigned int);
 
-		va_end (args);
+		va_end(args);
 		return (sum);
 	}
 }
