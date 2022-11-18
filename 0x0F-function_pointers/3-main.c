@@ -10,6 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int m, n;
+	char p;
 	int (*ptr)(int, int);
 
 	m = atoi(argv[1]);
@@ -20,16 +21,17 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (argv[2][1])
-	{
-		printf("Error\n");
-		exit(99);
-	}
 	ptr = get_op_func(argv[2]);
 	if (ptr == NULL)
 	{
 		printf("Error\n");
 		exit(99);
+	}
+	p = *argv[2];
+	if ((p == '/' || p == '%') && n == 0)
+	{
+		printf("Error\n");
+		exit(100);
 	}
 	printf("%d\n", ptr(m, n));
 	return (0);
