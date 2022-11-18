@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int m, n;
+	int m, n, res;
 	char p;
 	int (*ptr)(int, int);
 
@@ -33,6 +33,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n", ptr(m, n));
+	res = ptr(m, n);
+	printf("%d\n", res);
 	return (0);
 }
