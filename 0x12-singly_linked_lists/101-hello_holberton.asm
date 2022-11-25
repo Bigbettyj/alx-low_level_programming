@@ -7,10 +7,10 @@ msg db "Hello, Holberton", 0
 fmt db "%s", 10, 0
 
 main:
-mov edx, fmt
-mov ecx, msg
-mov ebx, 0
+mov rdx, fmt
+mov rsi, msg
+mov rax, 0
 call printf
 
-mov ebx, 0
+mov rax, 0
 ret
