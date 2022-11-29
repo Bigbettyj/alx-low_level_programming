@@ -47,7 +47,7 @@ size_t free_listint_safe(listint_t **h)
 			if (*h == add->p)
 			{
 				*h = NULL;
-				free_list_safe2(pptr);
+				free_list_safe2(&pptr);
 				return (node);
 			}
 		}
@@ -57,6 +57,6 @@ size_t free_listint_safe(listint_t **h)
 		node++;
 	}
 	*h = NULL;
-	free_list_safe(&pptr);
+	free_list_safe2(&pptr);
 	return (node);
 }
